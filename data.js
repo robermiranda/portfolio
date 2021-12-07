@@ -4,40 +4,42 @@ const secciones = [
         data : [
             {
                 titulo: "Más de 10 Años de Expericencia",
-                desc: `Empezando como programador php en el 2011 ha colaborado
-                    en distintos proyectos asumiendo roles como desarrollador
-                    y lider de proyecto. Dispuesto a trabajar en equipo mediante
-                    metodologías ágiles (scrum) y predisposición al dialogo.`,
+                desc: `Empezando como programador java y php en el 2011 he
+                    colaborado en distintos proyectos asumiendo diferentes
+                    roles (desarrollador y líder de proyecto). Cuento con
+                    buena disposición para trabajar en equipo mediante
+                    metodologías ágiles (scrum) y mantengo una posición
+                    abierta al diálogo.`
             },
             {
                 titulo: "Sector Gobierno",
-                desc: `7 años de trabajo en distintas entidades del
-                    gobierno de la CDMX. Trabajó en la digitalización de
-                    actas del Registro Civil de la CDMX. Colaboró también en
-                    la interconexión de sistemas entre las secretarias de
-                    finanzas de la CDMX y el Registro Público de la Propiedad.`,
+                desc: `Trabajé durante 7 años en el Registro Civil de la CDMX.
+                    Desarrollé apps para automatizar los procesos de trabajo
+                    en la institución y colaboré con otras instituciones
+                    gubernamentales para la interconexión de sistemas. Mensualmente
+                    recabé datos estadísticos para los reportes del INEGI.`
             },
             {
                 titulo: "Sector Bancario",
-                desc: `Coperó en el proyecto de Core
-                    Bancario de nueva generación para GFBN (Banorte) destacando
-                    su participación en el desarrollo de los principales
-                    componentes dentro de una arquitectura de microservicios.`,
+                desc: `Colaboré en el diseño de la arquitectura (microservicios)
+                    para el nuevo core bancario del Grupo Financiero Banorte en
+                    donde también desarrollé los principales
+                    componentes.`
             }
         ]
     },
     {
-        nombreSeccion: "FULLSTACK",
+        nombreSeccion: "FULL STACK",
         data: [
             {
                 titulo: "Backend",
-                desc: `4 años de experiencia programando en nodejs.
-                    Amplio conocimiento en los frameworks express y koa.`,
+                desc: `4 años de experiencia programando en Nodejs.
+                    Amplio conocimiento de los frameworks Express y Koa.`,
             },
             {
                 titulo: "Frontend",
-                desc: `Desarrollo con tecnologías como es6,
-                    typescript, react y los frameworks Nextjs y Gatsby`,
+                desc: `Desarrollo con tecnologías javascript: ES6,
+                    Typescript, React y los frameworks Next y Gatsby`,
             }
         ]
     },
@@ -45,42 +47,47 @@ const secciones = [
         nombreSeccion: "OTRAS TECNOLOGÍAS",
         data: [
             {
-                titulo: "Bases de datos",
-                desc: `Cuenta con experiencia en los principales manejadores
-                    de Bases de datos. Relacionales: postgresql, mysql
-                    y sqlite. Y las bases de datos NoSql: Mongo y Redis`,
+                titulo: "Bases de Datos",
+                desc: `Cuento con experiencia en los principales manejadores
+                    de Bases de datos relacionales: PostgreSQL, MySQL
+                    y SQLite, y las bases de datos NoSQL: MongoDB y Redis`,
+            },
+            {
+                titulo: "Git",
+                desc: `Uso diario de Git y GitHub para el manejo de versiones
+                    de mis proyectos personales y aquellos en los que colaboro
+                    como desarrollador.`
             },
             {
                 titulo: "Docker",
-                desc: `Ha empleado extensamente el uso de Docker para el
+                desc: `He empleado extensamente el uso de Docker para el
                     despliegue de aplicaciones dentro de contenedores.`,
             },
             {
                 titulo: "CSS",
-                desc: `Para dar estilo a las páginas web cuenta con amplia
-                    experiencia en el manejo de los siguientes
-                    frameworks: Bootstrap, Skeleton, Reactstrap y Material UI.`,
+                desc: `Para dar estilo a las páginas web tengo
+                    experiencia en el manejo de los
+                    frameworks: Bootstrap, Reactstrap y Material UI.`,
             },
             {
                 titulo: "Trello",
                 desc: `El uso de trello ha sido de gran ayuda en la administración de
-                    proyectos tanto personales como en colaboración con equipos pequeños
-                    de desarrollo.`,
+                    proyectos tanto personales como en colaboración con equipos pequeños.`
             },
             {
                 titulo: "Jira",
                 desc: `Acostrumbrado a trabajar en equipo mediante metodologías ágiles
-                    (scrum) en donde ha desatacado como integrante del equipo
+                    (scrum) en donde he destacado como integrante del equipo
                     de desarrollo.`,
             },
             {
                 titulo: "Cloud",
-                desc: `Ha desplegado contenedores Docker en lightsail AWS.`
+                desc: `He desplegado contenedores Docker en Lightsail AWS.`
             },
             {
                 titulo: "Jest",
-                desc: `Ha incorporado a sus habilidades el manejo de pruebas unitarias con Jest
-                    lo que permite desarrollar código eficaz y con menor incidencia
+                desc: `Manejo de pruebas unitarias con Jest
+                    para desarrollo de código eficaz y con menor incidencia
                     de bugs.`
             }
         ]
@@ -90,16 +97,16 @@ const secciones = [
         data: [
             {
                 titulo: "Docencia",
-                desc: `Desde 1997 hasta 2010 (14 años) fue profesor
+                desc: `Desde 1997 hasta 2010 (14 años) fui profesor
                     de Matemáticas en las universidades: UNITEC Cuitlahuac,
                     UVM Lomas Verdes, ENCB-IPN y la UAM Azcapotzalco`,
             },
             {
                 titulo: "Comercio Electrónico",
-                desc: `Durante la pandemia debida al Covid 19 se aventuró en ésta disciplina.
-                    Empleando shopify montó una tienda en línea (Tecnoprenda)
+                desc: `Durante la pandemia debida al Covid 19 me aventuré en ésta disciplina.
+                    Empleando shopify monté una tienda en línea (Tecnoprenda)
                     en donde se vendieron distintos tipos de wearables para lo cual
-                    se desarrollaron campañas publicitarias en google adds.`,
+                    desarrollé campañas publicitarias en google adds.`,
             }
         ]
     }
@@ -124,8 +131,8 @@ export const about = {
         {
             id: 1,
             parrafo: `Soy desarrollador web, especializado en javascript.
-            He colaborado en muchos proyectos que van desde aplicaciones
-            web sencillas (CRUD) para automatizar procesos básicos hasta
+            He colaborado en proyectos que van desde aplicaciones
+            web (CRUD) para automatizar procesos de trabajo hasta
             participar en el diseño y desarrollo de un core bancario.
             Sigo las normas y técnicas aceptadas en esta profesión,
             diariamente me documento para estar al día y mantengo una
@@ -161,7 +168,7 @@ export const portfolio = {
             automatizar la solicitud de aclaración de actas en el
             Registro Civil de la CDMX. La app es desplegada en los
             servidores de la institución y no tiene dominio público,
-            sin embargo puedes revisar el prototipo siguiendo
+            sin embargo puedes revisar el prototipo haciendo click en
             el link.`
         }
     ]
