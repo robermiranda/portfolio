@@ -67,7 +67,7 @@ const secciones = [
                 titulo: "CSS",
                 desc: `Para dar estilo a las páginas web tengo
                     experiencia en el manejo de los
-                    frameworks: Bootstrap, Reactstrap y Material UI.`,
+                    frameworks: Bootstrap, Reactstrap y MUI.`,
             },
             {
                 titulo: "Trello",
