@@ -10,35 +10,51 @@ import { getFile, getFiles } from './getFilesFromDir';
  *      parrafos: ['','']
  * }
  */
-export function parseMDFiles (directory) {
+export async function parseMDFiles (directory) {
     
-    const files = getFiles(directory);
+    let files;
+    
+    try {
+        files = await getFiles(directory);
+    }
+    catch(error) {
+        throw error;
+    }
 
     const datos = [];
 
-    files.forEach(file => {
+    if (Array.isArray(files) && files.length > 0) {
+    
+        files.forEach(file => {
 
-        const dato = {};
+            const dato = {};
 
-        const { data, content } = matter(file);
+            const { data, content } = matter(file);
 
-        const parrafos = content.split('\n\n').filter(parrafo => parrafo.length > 0);
-        
-        dato['titulo'] = data.titulo;
-        dato['seccion'] = data.seccion;
-        dato['parrafos'] = parrafos.map(parrafo => parrafo.trim().replace('\n', ' '));
+            const parrafos = content.split('\n\n').filter(parrafo => parrafo.length > 0);
+            
+            dato['titulo'] = data.titulo;
+            dato['seccion'] = data.seccion;
+            dato['parrafos'] = parrafos.map(parrafo => parrafo.trim().replace('\n', ' '));
 
-        datos.push(dato);
-    });
-
+            datos.push(dato);
+        });
+    }
 
     return datos;
 }
 
-export function parseMDFile (directory, fileName) {
 
-    const file = getFile(directory, fileName);
+export async function parseMDFile (directory, fileName) {
 
-    return matter(file);
+    try {
+        const file = await getFile(directory, fileName);
+        const {data, content} = matter(file);
 
+        return {data, content};
+    }
+    catch(error) {
+        console.error(`ERROR WHILE PARSING FRONT MATTER IN FILE ${fileName}`);
+        throw error;
+    }
 }
