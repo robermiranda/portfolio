@@ -1,6 +1,6 @@
 import { Link, Typography } from '@mui/material';
 
-export default function App ({ titulo, data }) {
+export function AppCopia ({ titulo, data }) {
     return (
         <>
             <Typography align="center" variant="h6" gutterBottom>
@@ -20,6 +20,28 @@ export default function App ({ titulo, data }) {
                     </Typography>
                 )
             }
+        </>
+    );
+}
+
+export default function App ({ titulo, tituloApp, link, descripcion }) {
+    return (
+        <>
+            <Typography align="center" variant="h6" gutterBottom>
+                {titulo}
+            </Typography>
+
+            <Typography align="justify" variant="body2" gutterBottom>
+                <Link rel="noopener"
+                    target="_blank"
+                    href={link}>
+                    
+                    {tituloApp}
+                </Link>
+                {' '}
+                {descripcion}
+                <br/>
+            </Typography>
         </>
     );
 }

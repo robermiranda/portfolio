@@ -1,7 +1,9 @@
 import aos from '../styles/Aos.module.css';
 import Home from '../components/Home';
 import { Grid } from "@mui/material";
-import { data, about, contacto, portfolio, bgImageName } from '../data';
+import { bgImageName } from '../data';
+import getSecciones from '../src/util/getSecciones';
+import { aboutME, contacto, portfolio } from '../src/util/aboutContent';
 
 
 export default function App ({ cards, about, contacto, portfolio }) {
@@ -27,12 +29,22 @@ export default function App ({ cards, about, contacto, portfolio }) {
 
 export async function getStaticProps () {
     
+    const secciones = getSecciones();
+    let count = 0;
+    let seccionCount = 0;
+    for (const s of secciones) {
+        s.id = ++seccionCount;
+        for (const d of s.data) {
+            d.id = ++count;
+        }
+    }
+
     return {
         props: {
-            cards: data,
-            about,
-            contacto,
-            portfolio
+            cards: secciones,
+            about: aboutME(),
+            contacto:  contacto(),
+            portfolio: portfolio()
         }
     }
 }

@@ -11,7 +11,10 @@ export default function App ({ about, portfolio, contacto}) {
                 <About titulo={about.titulo} descripcion={about.descripcion}/>
             </Grid>
             <Grid item xs={12} md={4}>
-                <Portfolio titulo={portfolio.titulo} data={portfolio.data}/>
+                <Portfolio titulo={portfolio.titulo}
+                    descripcion={portfolio.descripcion}
+                    tituloApp={portfolio.tituloApp}
+                    link={portfolio.link}/>
             </Grid>
             <Grid item xs={12} md={4}>
                 <Contacto titulo={contacto.titulo}
