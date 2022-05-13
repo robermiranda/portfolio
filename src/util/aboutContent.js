@@ -1,6 +1,5 @@
 import { parseMDFile } from "./parseMDFiles";
-
-const directory = 'content';
+import { footerDirectory as directory } from "../../data";
 
 
 export async function aboutME () {
