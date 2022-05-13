@@ -21,10 +21,10 @@ export async function parseMDFiles (directory) {
         throw error;
     }
 
-    const datos = [];
-
     if (Array.isArray(files) && files.length > 0) {
     
+        const datos = [];
+
         files.forEach(file => {
 
             const dato = {};
@@ -39,9 +39,10 @@ export async function parseMDFiles (directory) {
 
             datos.push(dato);
         });
-    }
 
-    return datos;
+        return datos;
+    }
+    else throw new Error(`ERROR. NO SE OBTUVIERON LOS ARCHIVOS DEL DIRECTORIO "${directory}"`);
 }
 
 

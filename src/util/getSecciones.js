@@ -1,17 +1,17 @@
 import { parseMDFiles } from './parseMDFiles';
-
-import { secciones } from '../../data';
+import { cardsDirectory, secciones } from '../../data';
 
 
 export default async function getSecciones () {
     
     let cards;
-    
+
     try {
-        cards = await parseMDFiles('content/cards');
+        cards = await parseMDFiles(cardsDirectory);
     }
     catch(error) {
-        console.error('ERROR AL OBTENER LAS SECCIONES\n', error);
+        console.error('ERROR AL OBTENER LAS SECCIONES');
+        throw error;
     }
 
     if (Array.isArray(cards) && cards.length > 0) {
@@ -32,5 +32,5 @@ export default async function getSecciones () {
             return dato;
         });
     }
-    else return [];
+    else throw new Error('ERROR. NO SE OBTUVO EL CONTENIDO DE LAS SECCIONES.');
 }
