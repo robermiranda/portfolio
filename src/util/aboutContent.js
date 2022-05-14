@@ -55,8 +55,8 @@ export async function portfolio () {
 
         return {
             titulo: data.titulo,
-            tituloApp: data.tituloApp,
-            link: data.link,
+            linkName: data.link.name,
+            link: data.link.url,
             descripcion: content.trim().replace('\n', '')
         }
     }
