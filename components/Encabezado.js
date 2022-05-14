@@ -1,18 +1,19 @@
 import style from '../styles/Aos.module.css';
+import { title } from '../data';
 
 export default function App () {
     return (
         <header className={style.hero}>
             <div className={style.herocenter}>
                 <h1 className={style.hero__logo} data-aos="zoom-in">
-                    Roberto Miranda
+                    {title.h1}
                 </h1>
                 <h2 className={style.hero__text}
                     data-aos="fade-up"
                     data-aos-easing="ease"
                     data-aos-delay="400">
                     
-                        Desarrollador Web y Sistemas Informáticos
+                        {title.h2}
                 </h2>
             </div>
             <span className={style.hero__scroll}

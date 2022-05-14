@@ -5,6 +5,7 @@ import CssBaseline from '@mui/material/CssBaseline';
 import { CacheProvider } from '@emotion/react';
 import theme from '../src/theme';
 import createEmotionCache from '../src/createEmotionCache';
+import { title } from '../data';
 
 
 // Client-side cache, shared for the whole session of the user in the browser.
@@ -17,7 +18,7 @@ export default function TheApp(props) {
     return (
         <CacheProvider value={emotionCache}>
             <Head>
-                <title>Roberto Miranda</title>
+                <title>{title.h1}</title>
                 <meta name="viewport" content="initial-scale=1, width=device-width" />
             </Head>
             <ThemeProvider theme={theme}>
