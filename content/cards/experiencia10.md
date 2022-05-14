@@ -1,6 +1,6 @@
 ---
 titulo: Más de 10 años de experiencia 
-seccion: experiencia
+seccion: Experiencia
 ---
 
 Empezando como programador java y php en el 2011 he

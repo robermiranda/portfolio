@@ -1,6 +1,6 @@
 ---
 titulo: Sector Gobierno
-seccion: experiencia
+seccion: Experiencia
 ---
 
 Trabajé durante 7 años en el Registro Civil de la CDMX.

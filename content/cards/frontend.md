@@ -1,7 +1,7 @@
 ---
 titulo: Frontend
-seccion: fullstack
+seccion: Tecnologías de la Información
 ---
 
 Desarrollo con tecnologías javascript: ES6,
-Typescript, React y los frameworks Next y Gatsby
+Typescript, React y los frameworks Next y Eleventy

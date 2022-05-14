@@ -1,6 +1,6 @@
 ---
 titulo: Sector Bancario
-seccion: experiencia
+seccion: Experiencia
 ---
 
 Colaboré en el diseño de la arquitectura (microservicios)

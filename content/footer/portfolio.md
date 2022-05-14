@@ -1,10 +1,10 @@
 ---
 titulo: PORTAFOLIO
-tituloApp: Aclaración de Actas
-link: https://glacial-earth-62758.herokuapp.com
+link:
+    name: portafolio
+    url: /portafolio
 ---
 
-Es una aplicación web para automatizar la solicitud de aclaración
-de actas en el Registro Civil de la CDMX. La app es desplegada en los
-servidores de la institución y no tiene dominio público,
-sin embargo puedes revisar el prototipo haciendo click en el link.
+Mi portafolio estará conformado por algunas de las applicaciones web que iré 
+desarrollando. Presento por lo pronto solo una de ellas de la cual encontrarás
+el detalle al seguir la siguiente liga.
