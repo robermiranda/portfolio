@@ -67,68 +67,93 @@ function PortfolioCard({titulo, descripcion, urlImg, urlApp}) {
 }
 
 
-export default function App ({cards}) {
+function NavBar () {
     return (
-        <>
-            <ThemeProvider theme={darkTheme}>
-                <AppBar position="relative">
-                    <Toolbar>
-                        <Typography variant="h6" color="inherit" noWrap>
-                            RM
-                        </Typography>
-                    </Toolbar>
-                </AppBar>
-            </ThemeProvider>
-            <main>
-            <Box
-                sx={{
-                    bgcolor: 'background.paper',
-                    pt: 8,
-                    pb: 6,}}>
-
-                <Container maxWidth="sm">
-                    <Typography
-                        component="h2"
-                        variant="h2"
-                        align="center"
-                        color="#0E0F34"
-                        gutterBottom>
-
-                        PORTAFOLIO
+        <ThemeProvider theme={darkTheme}>
+            <AppBar position="relative">
+                <Toolbar>
+                    <Typography variant="h6" color="inherit" noWrap>
+                        RM
                     </Typography>
-                    <Typography variant="h5" align="center" color="text.secondary" paragraph>
-                        Presento en esta página algunas de las aplicaciones web que he
-                        desarrollado. la mayoría de ellas no me pertenecen así que solo
-                        presento de ellas solo una descripción. Si bien son pocas con el
-                        tiempo ire agregando más de ellas.
-                    </Typography>
-                </Container>
-            </Box>
-            <Container sx={{ py: 8 }} maxWidth="md">
-                <Grid container spacing={4}>
-                    {cards.map((card) => (
-                    <Grid item key={card.id} xs={12} sm={6} md={4}>
-                        {PortfolioCard(card)}
-                    </Grid>
-                    ))}
-                </Grid>
-            </Container>
-            </main>
-            {/* Footer */}
-            <Box sx={{ bgcolor: 'background.paper', p: 6 }} component="footer">
-                <Typography variant="h6" align="center" gutterBottom>
-                Footer
-                </Typography>
+                </Toolbar>
+            </AppBar>
+        </ThemeProvider>
+    );
+}
+
+
+function Header () {
+    return (
+        <Box
+            sx={{
+                bgcolor: 'background.paper',
+                pt: 8,
+                pb: 6,}}>
+
+            <Container maxWidth="sm">
                 <Typography
+                    component="h2"
+                    variant="h2"
+                    align="center"
+                    color="#0E0F34"
+                    gutterBottom>
+
+                    PORTAFOLIO
+                </Typography>
+                <Typography variant="h5" align="center" color="text.secondary" paragraph>
+                    Presento en esta página algunas de las aplicaciones web que he
+                    desarrollado. la mayoría de ellas no me pertenecen así que solo
+                    presento de ellas solo una descripción. Si bien son pocas con el
+                    tiempo ire agregando más de ellas.
+                </Typography>
+            </Container>
+        </Box>
+    );
+}
+
+function Body ({cards}) {
+    return (
+        <Container sx={{ py: 8 }} maxWidth="md">
+            <Grid container spacing={4}>
+                {cards.map((card) => (
+                <Grid item key={card.id} xs={12} sm={6} md={4}>
+                    {PortfolioCard(card)}
+                </Grid>
+                ))}
+            </Grid>
+        </Container>
+    );
+}
+
+
+function Footer () {
+    return (
+        <Box sx={{ bgcolor: 'background.paper', p: 6 }} component="footer">
+            <Typography variant="h6" align="center" gutterBottom>
+                Footer
+            </Typography>
+            <Typography
                 variant="subtitle1"
                 align="center"
                 color="text.secondary"
-                component="p"
-                >
+                component="p">
+
                 Something here to give the footer a purpose!
-                </Typography>
-                <Copyright />
-            </Box>
+            </Typography>
+            <Copyright />
+        </Box>
+    );
+}
+
+export default function App ({cards}) {
+    return (
+        <>
+            <NavBar/>
+            <main>
+                <Header/>
+                <Body cards={cards}/>
+            </main>
+            <Footer/>           
         </>
     );
 }
