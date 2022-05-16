@@ -36,7 +36,7 @@ function Copyright() {
 }
 
 
-function PortfolioCard(titulo, contenido) {
+function PortfolioCard({titulo, descripcion, urlImg, urlApp}) {
     return (
         <Card
             sx={{ height: '100%',
@@ -47,40 +47,27 @@ function PortfolioCard(titulo, contenido) {
                 sx={{
                     pt: '5.25%',
                 }}
-                image="https://source.unsplash.com/random"
+                image={urlImg}
                 alt="random"/>
             <CardContent sx={{ flexGrow: 1 }}>
                 <Typography gutterBottom variant="h5" component="h2">
                     {titulo}
                 </Typography>
                 <Typography>
-                    {contenido}
+                    {descripcion}
                 </Typography>
             </CardContent>
             <CardActions>
-                <Button size="small">View</Button>
-                <Button size="small">Edit</Button>
+                <Link color="inherit" href={urlApp} target="_blank">
+                    <Button size="small">Sitio Web</Button>
+                </Link>
             </CardActions>
         </Card>
     );
 }
 
 
-const cards = [
-    {id: 1, item: PortfolioCard("HEADING 1", "Este es el contenido")},
-    {id: 2, item: PortfolioCard("HEADING 2", "Este es el contenido")},
-    {id: 3, item: PortfolioCard("HEADING 3", "Este es el contenido")},
-    {id: 4, item: PortfolioCard("HEADING 4", "Este es el contenido")},
-    {id: 5, item: PortfolioCard("HEADING 5", "Este es el contenido")},
-    {id: 6, item: PortfolioCard("HEADING 6", "Este es el contenido")},
-    {id: 7, item: PortfolioCard("HEADING 7", "Este es el contenido")},
-    {id: 8, item: PortfolioCard("HEADING 8", "Este es el contenido")},
-    {id: 9, item: PortfolioCard("HEADING 9", "Este es el contenido")},
-    {id: 10, item: PortfolioCard("HEADING 10", "Este es el contenido")},
-];
-
-
-export default function App () {
+export default function App ({cards}) {
     return (
         <>
             <ThemeProvider theme={darkTheme}>
@@ -121,7 +108,7 @@ export default function App () {
                 <Grid container spacing={4}>
                     {cards.map((card) => (
                     <Grid item key={card.id} xs={12} sm={6} md={4}>
-                        {card.item}
+                        {PortfolioCard(card)}
                     </Grid>
                     ))}
                 </Grid>
