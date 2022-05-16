@@ -5,6 +5,7 @@ import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
 import Link from '@mui/material/Link';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
+import Footer from './Footer';
 
 
 const darkTheme = createTheme({
@@ -16,27 +17,15 @@ const darkTheme = createTheme({
 });
 
 
-function Copyright() {
-    return (
-        <Typography variant="body2" color="text.secondary" align="center">
-            {'Copyright © '}
-            <Link color="inherit" href="https://mui.com/">
-                Your Website
-            </Link>{' '}
-            {new Date().getFullYear()}
-            {'.'}
-        </Typography>
-    );
-}
-
-
-function NavBar () {
+function NavBar ({urlWebsite}) {
     return (
         <ThemeProvider theme={darkTheme}>
             <AppBar position="relative">
                 <Toolbar>
                     <Typography variant="h6" color="inherit" noWrap>
-                        RM
+                        <Link color="inherit" href={urlWebsite}>
+                            {'RM'}
+                        </Link>
                     </Typography>
                 </Toolbar>
             </AppBar>
@@ -45,7 +34,7 @@ function NavBar () {
 }
 
 
-function Header () {
+function Header ({titulo, desc}) {
     return (
         <Box
             sx={{
@@ -61,13 +50,10 @@ function Header () {
                     color="#0E0F34"
                     gutterBottom>
 
-                    PORTAFOLIO
+                    {titulo}
                 </Typography>
                 <Typography variant="h5" align="center" color="text.secondary" paragraph>
-                    Presento en esta página algunas de las aplicaciones web que he
-                    desarrollado. la mayoría de ellas no me pertenecen así que solo
-                    presento de ellas solo una descripción. Si bien son pocas con el
-                    tiempo ire agregando más de ellas.
+                    {desc}
                 </Typography>
             </Container>
         </Box>
@@ -75,34 +61,16 @@ function Header () {
 }
 
 
-function Footer () {
-    return (
-        <Box sx={{ bgcolor: 'background.paper', p: 6 }} component="footer">
-            <Typography variant="h6" align="center" gutterBottom>
-                Footer
-            </Typography>
-            <Typography
-                variant="subtitle1"
-                align="center"
-                color="text.secondary"
-                component="p">
+export default function App ({ header, children }) {
 
-                Something here to give the footer a purpose!
-            </Typography>
-            <Copyright />
-        </Box>
-    );
-}
-
-export default function App (props) {
     return (
         <>
-            <NavBar/>
+            <NavBar urlWebsite={"localhost:3000"}/>
             <main>
-                <Header/>
-                {props.children}
+                <Header titulo={header.titulo} desc={header.desc}/>
+                {children}
             </main>
-            <Footer/>           
+            <Footer/>
         </>
     );
 }
