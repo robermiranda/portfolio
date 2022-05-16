@@ -1,10 +1,17 @@
-import Gallery from '../../components/PortfolioGalery';
 import getCards from '../../src/util/getCardsPortfolio';
+import BodyWrapper from '../../components/BodyWrapper';
+import Body from '../../components/portfolio/Body';
 
 
-export default function App ({ cards }) {
-    return <Gallery cards={cards}/>
+export default function App ({cards}) {
+    return (
+        <BodyWrapper>
+            <Body cards={cards}/>
+        </BodyWrapper>
+
+    );
 }
+
 
 export async function getStaticProps () {
     try {
