@@ -3,12 +3,8 @@ import { getFile, getFiles } from './getFilesFromDir';
 
 
 /**
- * Regresa un arreglo de datos con la sig. estructura:
- * {
- *      titulo: '',
- *      seccion: '',
- *      parrafos: ['','']
- * }
+ * Regresa un arreglo con los datos obtenidos de los archivos
+ * md ubicados en el directorio dado.
  */
 export async function parseMDFiles (directory) {
     
@@ -26,18 +22,8 @@ export async function parseMDFiles (directory) {
         const datos = [];
 
         files.forEach(file => {
-
-            const dato = {};
-
             const { data, content } = matter(file);
-
-            const parrafos = content.split('\n\n').filter(parrafo => parrafo.length > 0);
-            
-            dato['titulo'] = data.titulo;
-            dato['seccion'] = data.seccion;
-            dato['parrafos'] = parrafos.map(parrafo => parrafo.trim().replace('\n', ' '));
-
-            datos.push(dato);
+            datos.push({data, content});
         });
 
         return datos;

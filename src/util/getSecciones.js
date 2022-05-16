@@ -2,12 +2,26 @@ import { parseMDFiles } from './parseMDFiles';
 import { cardsDirectory, secciones } from '../../data';
 
 
+function getCard ({data, content}) {
+    const dato = {};
+
+    const parrafos = content.split('\n\n').filter(parrafo => parrafo.length > 0);
+    
+    dato['titulo'] = data.titulo;
+    dato['seccion'] = data.seccion;
+    dato['parrafos'] = parrafos.map(parrafo => parrafo.trim().replace('\n', ' '));
+
+    return dato;
+}
+
+
 export default async function getSecciones () {
     
     let cards;
 
     try {
-        cards = await parseMDFiles(cardsDirectory);
+        const dataCards = await parseMDFiles(cardsDirectory);
+        cards = dataCards.map(dc => getCard(dc));
     }
     catch(error) {
         console.error('ERROR AL OBTENER LAS SECCIONES');
