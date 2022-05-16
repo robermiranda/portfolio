@@ -1,6 +1,6 @@
 import { Grid } from '@mui/material';
 import About from './About';
-import Portfolio from './Portfolio';
+import Portfolio from './portfolio/Portfolio';
 import Contacto from './Contacto';
 
 
