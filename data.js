@@ -4,6 +4,8 @@ export const secciones = ['Experiencia', 'Tecnologías de la Información', 'Otr
 
 export const cardsDirectory = 'content/cards';
 
+export const cardsPortfolioDirectory = 'content/portfolio';
+
 export const footerDirectory = 'content/footer';
 
 export const title = {
