@@ -61,7 +61,7 @@ function Header ({titulo, desc}) {
 }
 
 
-export default function App ({ header, children }) {
+export default function App ({ header, footer, children }) {
 
     return (
         <>
@@ -70,7 +70,10 @@ export default function App ({ header, children }) {
                 <Header titulo={header.titulo} desc={header.desc}/>
                 {children}
             </main>
-            <Footer/>
+            <Footer titulo={footer.titulo}
+                desc={footer.desc}
+                urlWebsite={footer.urlWebsite}
+                siteName={footer.siteName}/>
         </>
     );
 }

@@ -3,16 +3,6 @@ import Typography from '@mui/material/Typography';
 import Link from '@mui/material/Link';
 
 
-function getProps () {
-    return {
-        titulo: "Roberto Miranda",
-        desc: "Desarrollador Fullstack",
-        urlWebsite: "localhost:3000",
-        siteName: "romix systems"
-    }
-}
-
-
 function Copyright({urlWebsite, siteName}) {
     return (
         <Typography variant="body2" color="text.secondary" align="center">
@@ -27,10 +17,8 @@ function Copyright({urlWebsite, siteName}) {
 }
 
 
-export default function Footer () {
+export default function Footer ({ titulo, desc, urlWebsite, siteName }) {
 
-    const { titulo, desc, urlWebsite, siteName } = getProps();
-    
     return (
         <Box sx={{ bgcolor: 'background.paper', p: 6 }} component="footer">
             <Typography variant="h6" align="center" gutterBottom>
