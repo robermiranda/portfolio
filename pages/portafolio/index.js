@@ -1,24 +1,16 @@
 import getCards from '../../src/util/getCardsPortfolio';
 import getFooter from '../../src/util/getFooter';
+import getHeader from '../../src/util/getHeaderPortfolio';
 import BodyWrapper from '../../components/BodyWrapper';
 import Body from '../../components/portfolio/Body';
 
 
-export default function App ({cards, footer}) {
+export default function App ({cards, footer, header}) {
     
-    const header = {
-        titulo: "PORTAFOLIO",
-        desc: `Presento en esta página algunas de las aplicaciones web que he
-        desarrollado. la mayoría de ellas no me pertenecen así que solo
-        presento de ellas solo una descripción. Si bien son pocas con el
-        tiempo ire agregando más de ellas.`
-    }
-
     return (
         <BodyWrapper header={header} footer={footer}>
             <Body cards={cards}/>
         </BodyWrapper>
-
     );
 }
 
@@ -28,7 +20,8 @@ export async function getStaticProps () {
         return {
             props: {
                 cards: await getCards(),
-                footer: await getFooter()
+                footer: await getFooter(),
+                header: await getHeader()
             }
         }
     }
