@@ -98,7 +98,7 @@ export default function App ({ header, footer, children }) {
 
     return (
         <>
-            <NavBar urlWebsite={"localhost:3000"}/>
+            <NavBar urlWebsite={"/"}/>
             <main>
                 <Header titulo={header.titulo} desc={header.desc}/>
                 {children}

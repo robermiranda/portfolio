@@ -1,6 +1,6 @@
 ---
 titulo: Roberto Miranda
-urlWebsite: localhost:3000
+urlWebsite: /
 siteName: romix systems
 ---
 
