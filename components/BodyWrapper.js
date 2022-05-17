@@ -5,7 +5,6 @@ import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
 import Link from '@mui/material/Link';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
-import Footer from './Footer';
 
 
 const darkTheme = createTheme({
@@ -60,6 +59,40 @@ function Header ({titulo, desc}) {
     );
 }
 
+
+function Copyright({urlWebsite, siteName}) {
+    return (
+        <Typography variant="body2" color="text.secondary" align="center">
+            {'Copyright © '}
+            <Link color="inherit" href={urlWebsite}>
+                {siteName}
+            </Link>{' '}
+            {new Date().getFullYear()}
+            {'.'}
+        </Typography>
+    );
+}
+
+
+function Footer ({ titulo, desc, urlWebsite, siteName }) {
+
+    return (
+        <Box sx={{ bgcolor: 'background.paper', p: 6 }} component="footer">
+            <Typography variant="h6" align="center" gutterBottom>
+                {titulo}
+            </Typography>
+            <Typography
+                variant="subtitle1"
+                align="center"
+                color="text.secondary"
+                component="p">
+
+                {desc}
+            </Typography>
+            <Copyright urlWebsite={urlWebsite} siteName={siteName}/>
+        </Box>
+    );
+}
 
 export default function App ({ header, footer, children }) {
 
