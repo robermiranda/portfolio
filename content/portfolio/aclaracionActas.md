@@ -12,4 +12,4 @@ actos principales del Registro Civil: Nacimiento, Matrimonio y Defunción.
 
 Las tecnologías empleadas en el Backend son Express, Typescript y Postgres;
 en el Frontend se uso Reactjs, Typescript, Recoil, Recharts y MUI. La 
-web app es desplegada en Vercel.
+web app es desplegada en Heroku.
