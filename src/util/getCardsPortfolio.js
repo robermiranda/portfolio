@@ -5,15 +5,26 @@ let c = 0;
 
 function getCard ({data, content}) {
 
+    const descripcion = [];
+
+    let counterCard = 0;
+
+    content
+    .split('\n\n').filter(parrafo => parrafo.length > 0)
+    .map(parrafo => parrafo.trim().replace('\n', ' '))
+    .forEach(parrafo => {
+        descripcion.push({
+            id: counterCard++,
+            parrafo
+        });
+    });
+
     return {
         id: ++c,
         titulo: data.titulo,
         urlImg: data.urlImg,
         urlApp: data.urlApp,
-        descripcion: content.split('\n\n')
-        .filter(parrafo => parrafo.length > 0)
-        .map(parrafo => parrafo.trim()
-        .replace('\n', ' '))
+        descripcion
     }
 }
 
