@@ -1,18 +1,25 @@
-import { Typography } from '@mui/material';
+import { Link, Typography } from '@mui/material';
 
 export default function App (props) {
+
+    const link = <Link rel="noopener"
+        target="_blank"
+        href={'/about'}>
+        
+        {'segir leyendo...'}
+    </Link> 
+    
     return (
         <>
             <Typography align="center" variant="h6" gutterBottom>
                 {props.titulo}
             </Typography>
             {
-                props.descripcion.map(desc =>
-                    <Typography key={desc.id} align="justify" variant="body2" gutterBottom>
-                        {desc.parrafo}
-                        <br/>
-                    </Typography>        
-                )
+                <Typography align="justify" variant="body2" gutterBottom>
+                    {props.descripcion[0].parrafo}
+                    {' '}
+                    {link}
+                </Typography>    
             }
         </>
     ); 

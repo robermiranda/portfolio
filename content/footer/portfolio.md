@@ -5,6 +5,6 @@ link:
     url: /portafolio
 ---
 
-Mi portafolio estará conformado por algunas de las applicaciones web que iré 
-desarrollando. Presento por lo pronto solo una de ellas de la cual encontrarás
-el detalle al seguir la siguiente liga.
+En está sección presento algunos de los prototipos que he desarrollado y 
+han sido liberados en producción. También expongo otros que iniciaron como
+prueba de concepto y terminaron en herramientas de uso personal.
