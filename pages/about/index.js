@@ -47,11 +47,7 @@ export async function getStaticProps () {
         return {
             props: {
                 footer: await getFooter(),
-                content: await getContent(),
-                header: {
-                    titulo: 'About me',
-                    desc: null
-                }
+                content: await getContent()
             }
         }
     }
@@ -65,12 +61,11 @@ export async function getStaticProps () {
 async function getContent () {
 
     try {
-        const { data, content } = await parseMDFile('/pages/about', 'index.md');
+        const { data, content } = await parseMDFile('/pages/about', 'about.md');
 
         return {
             titulo: data.titulo,
-            desc: content,
-            urlImage: data.urlImg,
+            desc: content
         }
     }
     catch(error) {

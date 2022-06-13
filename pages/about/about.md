@@ -1,6 +1,5 @@
 ---
 titulo: About me
-urlImg: images/robertoErik.jpg
 ---
 
 Soy desarrollador Fullstack, especializado en Javascript.
