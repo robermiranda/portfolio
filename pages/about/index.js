@@ -61,7 +61,7 @@ export async function getStaticProps () {
 async function getContent () {
 
     try {
-        const { data, content } = await parseMDFile('/pages/about', 'about.md');
+        const { data, content } = await parseMDFile('/pages/about', 'data.md');
 
         return {
             titulo: data.titulo,
