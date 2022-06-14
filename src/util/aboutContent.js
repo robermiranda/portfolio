@@ -39,7 +39,8 @@ export async function contacto () {
         return {
             titulo: data.titulo,
             email: data.email,
-            descripcion: content.trim().replace('\n', '')
+            github: data.github,
+            linkedin: data.linkedin
         }    
     }
     catch(error) {

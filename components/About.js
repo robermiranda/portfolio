@@ -3,7 +3,7 @@ import { Link, Typography } from '@mui/material';
 export default function App (props) {
 
     const link = <Link rel="noopener"
-        target="_blank"
+        target="_self"
         href={'/about'}>
         
         {'segir leyendo...'}

@@ -12,7 +12,7 @@ export default function App ({ titulo, linkName, link, descripcion }) {
                 {descripcion}
                 {' '}
                 <Link rel="noopener"
-                    target="_blank"
+                    target="_self"
                     href={link}>
                     
                     {linkName}

@@ -4,7 +4,7 @@ titulo: About me
 
 Soy desarrollador Fullstack, especializado en Javascript.
 He colaborado en proyectos que van desde aplicaciones
-web (CRUD) para automatizar procesos de trabajo hasta
+web para automatizar procesos de trabajo hasta
 participar en el diseño y desarrollo de un core bancario.
 Sigo las normas y técnicas aceptadas en esta profesión,
 diariamente me documento para estar al día y mantengo una
