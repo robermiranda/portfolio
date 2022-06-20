@@ -1,4 +1,4 @@
-import { Grid, Typography } from '@mui/material';
+import { Grid, Link, Typography } from '@mui/material';
 import Image from 'next/image';
 import getFooter from '../../src/util/getFooter';
 import BodyWrapper from '../../components/BodyWrapper';
@@ -36,6 +36,16 @@ export default function App ({footer, content}) {
                             </Typography>
                         )
                     }
+                    <Typography>
+                        Si te interesa mi perfil puedes descargar mi {' '}
+                        <Link rel="noopener"
+                            target="_blank"
+                            href='https://drive.google.com/file/d/1xWbUiIVpzPwuSv2yQ6r9JbvI3Sa_kMKM/view?usp=sharing'>
+                            
+                            {"CV"}
+                        </Link>
+                        {' '} en google drive.
+                    </Typography>
                 </Grid>
             </Grid>
         </BodyWrapper>
