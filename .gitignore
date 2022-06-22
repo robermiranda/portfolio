@@ -38,3 +38,4 @@ yarn-error.log*
 /public/favicon.ico
 .vscode
 notas.txt
+package-lock.json

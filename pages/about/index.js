@@ -1,4 +1,5 @@
-import { Grid, Link, Typography } from '@mui/material';
+import { Grid, Link } from '@mui/material';
+import ReactMarkdown from 'react-markdown';
 import Image from 'next/image';
 import getFooter from '../../src/util/getFooter';
 import BodyWrapper from '../../components/BodyWrapper';
@@ -15,41 +16,24 @@ export default function App ({footer, content}) {
 
     return (
         <BodyWrapper header={header} footer={footer}>
-            
             <Grid container justifyContent="center" spacing={4} sx={{px:{xs:2, md: 4, lg: 12}}}>
                 <Grid item>
                     <Image src={imageRoberto} alt="Roberto Miranda"/>
                 </Grid>
                 <Grid item xs={12}>
-                    {
-                        content.desc
-                        .split('\n\n').filter(parrafo0 => parrafo0.length > 0)
-                        .map((parrafo, index) => 
-                            <Typography key={index}
-                                gutterBottom
-                                display="block"
-                                pb={1}
-                                align="justify"
-                                variant="body1">
-
-                                {parrafo}
-                            </Typography>
-                        )
-                    }
-                    <Typography>
-                        Si te interesa mi perfil puedes descargar mi {' '}
-                        <Link rel="noopener"
-                            target="_blank"
-                            href='https://drive.google.com/file/d/1xWbUiIVpzPwuSv2yQ6r9JbvI3Sa_kMKM/view?usp=sharing'>
-                            
-                            {"CV"}
-                        </Link>
-                        {' '} en google drive.
-                    </Typography>
+                    <ReactMarkdown components={{a: CustomLink}}>
+                        {content.desc}
+                    </ReactMarkdown>
                 </Grid>
             </Grid>
         </BodyWrapper>
     );
+}
+
+function CustomLink ({ href, ...otherProps }) {
+    return <Link href={href} target="_blank">
+        <a {...otherProps} />
+    </Link>
 }
 
 export async function getStaticProps () {

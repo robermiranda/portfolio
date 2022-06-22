@@ -15,3 +15,7 @@ de Ciencias de la UNAM. Fui profesor universitario
 durante 14 años y soy desarrollador web desde el 2011.
 He pasado por varias tecnologías, desde php, java y javascript.
 Actualmente vivo en la CDMX.
+
+Si te interesa mi perfil puedes descargar mi
+[CV](https://drive.google.com/file/d/1xWbUiIVpzPwuSv2yQ6r9JbvI3Sa_kMKM/view?usp=sharing)
+en google drive.
