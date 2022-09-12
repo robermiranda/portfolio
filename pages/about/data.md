@@ -17,5 +17,5 @@ He pasado por varias tecnologías, desde php, java y javascript.
 Actualmente vivo en la CDMX.
 
 Si te interesa mi perfil puedes descargar mi
-[CV](https://drive.google.com/file/d/1xWbUiIVpzPwuSv2yQ6r9JbvI3Sa_kMKM/view?usp=sharing)
+[CV](https://drive.google.com/file/d/1WQLlSz_ucq4NlGhwsburOdc0M4Q2FU5n/view?usp=sharing)
 en google drive.

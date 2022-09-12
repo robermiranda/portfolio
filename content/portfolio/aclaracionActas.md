@@ -1,6 +1,6 @@
 ---
 titulo: Aclaración de Actas
-urlImg: https://mexiconuevaera.com/sites/default/files/styles/interior_noticia/public/imagenes/2017/Dic/27/acta2.jpg?itok=NBvi9_WV
+urlImg: image/aclaraciones.png
 urlApp: https://glacial-earth-62758.herokuapp.com/
 ---
 
