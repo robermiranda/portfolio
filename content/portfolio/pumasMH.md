@@ -1,7 +1,7 @@
 ---
 titulo: Escuela de football Pumas Miguel Hidalgo
 urlImg: image/paginaRegistroAlumno.png
-urlApp: https://pmh-admin.herokuapp.com/
+urlApp: https://pumas-admin.onrender.com/
 ---
 
 Esta aplicación web permite al administrador llevar el control
