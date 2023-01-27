@@ -9,6 +9,6 @@ llevar el control de la asistencia de los alumnos, registrar alumnos,
 darlos de baja actualizar datos, búsqueda de inasistencias y recopilación
 de datos estadísticos.
 
-El backend de la app esta hospedado en *MongoDB Atlas* y el cliente fue
-desarrollado con *reactjs* y esta hospedado en *render*
+El backend de la app esta hospedado en MongoDB Atlas y el cliente fue
+desarrollado con reactjs y esta hospedado en render
 La app esta en etapa de desarrollo.
