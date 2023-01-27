@@ -4,9 +4,11 @@ urlImg: image/paginaRegistroAlumno.png
 urlApp: https://pumas-admin.onrender.com/
 ---
 
-Esta aplicación web permite al administrador llevar el control
-de la asistencia de los alumnos de la escuela de football. Entre las
-funciones más importantes estan el registro de alumnos,
-actualización de datos, búsqueda de alumnos, búsqueda de inasistencia
-además de agendar partidos amistosos y de torneo. La app esta en
-etapa de desarrollo.
+Esta es una aplicación web que permite al administrador de la escuela
+llevar el control de la asistencia de los alumnos, registrar alumnos,
+darlos de baja actualizar datos, búsqueda de inasistencias y recopilación
+de datos estadísticos.
+
+El backend de la app esta hospedado en *MongoDB Atlas* y el cliente fue
+desarrollado con *reactjs* y esta hospedado en *render*
+La app esta en etapa de desarrollo.

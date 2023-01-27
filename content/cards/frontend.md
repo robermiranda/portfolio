@@ -4,4 +4,4 @@ seccion: Tecnologías de la Información
 ---
 
 Desarrollo con tecnologías javascript: ES6,
-Typescript, React y los frameworks Next y Eleventy
+Typescript, React y Next.
