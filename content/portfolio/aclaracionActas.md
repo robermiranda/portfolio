@@ -1,7 +1,7 @@
 ---
 titulo: Aclaración de Actas
 urlImg: image/aclaraciones.png
-urlApp: https://glacial-earth-62758.herokuapp.com/
+urlApp: https://aclaraciones-solicitud.onrender.com/
 ---
 
 Es una aplicación web desarrollada para el Registro Civil de la CDMX.
